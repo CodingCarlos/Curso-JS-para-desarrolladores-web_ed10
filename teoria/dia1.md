@@ -17,15 +17,15 @@
 
 ### Sobre el profesor
 
-![proud_of_campus](../imagenes/yomismo.jpg)
+![carlos-hernandez](../imagenes/carlos-hernandez.jpg)
 
 **Bio:**
-"#OpenSource | #JavaScript, #Node, #Golang and #Python fan & learning | Co-fundador de [@os_weekends](http://osweekends.com/) | Profe en [@fictiziaescuela](http://www.fictizia.com/profesores/) |  A veces escribo en Medium cuando la ocasión me lo permite "
+A veces sueño que decido con if y else, y mastico con while. Entreprenú. Lio a gente en [@os_weekends](http://osweekends.com/). Me dejo liar en todo lo que sea molón y con filosofía abierta. 
 
 **Redes Sociales:**
-- [Twitter](https://twitter.com/josheriff)
-- [Github](https://github.com/josheriff)
-- [Medium](https://medium.com/@josheriff)
+- [Twitter](https://twitter.com/CodingCarlos)
+- [Github](https://github.com/CodingCarlos)
+- [Medium](https://medium.com/@CodingCarlos)
 
 ### Hablemos de la web
 - [Evolution of the web](http://www.evolutionoftheweb.com/?hl=es)
@@ -99,12 +99,12 @@
 
   > El lenguaje HTML basa su filosofía de desarrollo en la diferenciación. Para añadir un elemento externo a la página (imagen, vídeo, script, entre otros.), este no se incrusta directamente en el código de la página, sino que se hace una referencia a la ubicación de dicho elemento mediante texto. De este modo, la página web contiene solamente texto mientras que recae en el navegador web (interpretador del código) la tarea de unir todos los elementos y visualizar la página final. Al ser un estándar, HTML busca ser un lenguaje que permita que cualquier página web escrita en una determinada versión, pueda ser interpretada de la misma forma (estándar) por cualquier navegador web actualizado.[HTML Wikiwand](https://es.wikipedia.org/wiki/HTML)
 - Versiones:
-  	- HTML 1.0	(1991)
-  	- HTML 2.0 (1995)
-  	- HTML 3.2 (1997)
-  	- HTML 4 (1997)
-  	- HTML 4.01 (1999)
-  	- HTML 5 (2014)
+    - HTML 1.0  (1991)
+    - HTML 2.0 (1995)
+    - HTML 3.2 (1997)
+    - HTML 4 (1997)
+    - HTML 4.01 (1999)
+    - HTML 5 (2014)
 
 ### CSS
   > Hoja de estilo en cascada o CSS (siglas en inglés de cascading style sheets) es un lenguaje usado para definir y crear la presentación de un documento estructurado escrito en HTML o XML2 (y por extensión en XHTML). El World Wide Web Consortium (W3C) es el encargado de formular la especificación de las hojas de estilo que servirán de estándar para los agentes de usuario o navegadores.
@@ -133,71 +133,71 @@
 - Multiparadigma
 - Imperativo y estructurado
 - Dinámico
-	- Tipado dinámico
-	- Objetual
-	- Evaluación en tiempo de ejecución
+  - Tipado dinámico
+  - Objetual
+  - Evaluación en tiempo de ejecución
 - Funcional
-	- Funciones de primera clase
-- Prototípico	
-	- Prototipos
-	- Funciones constructoras
+  - Funciones de primera clase
+- Prototípico 
+  - Prototipos
+  - Funciones constructoras
 - Entorno de ejecución
-- Funciones varídicas	
+- Funciones varídicas 
 - Funciones como métodos
 - Arrays y la definición literal de objetos
 - Expresiones regulares
 
 **[ECMA-262](https://www.wikiwand.com/es/ECMAScript)**
 - Versiones:
-	- Versión 1 (Junio de 1997)
-	- Versión 2 (Junio de 1998)
-	- Versión 3 (Diciembre de 1999)
-	- Versión 3 (Abandonado)
-	- Versión 5 (Diciembre de 2009)
-	- Versión 5.1 (Diciembre de 2011)
-	- Versión 6 (Junio de 2015)
-	- Versión 7 (En desarrollo)
+  - Versión 1 (Junio de 1997)
+  - Versión 2 (Junio de 1998)
+  - Versión 3 (Diciembre de 1999)
+  - Versión 3 (Abandonado)
+  - Versión 5 (Diciembre de 2009)
+  - Versión 5.1 (Diciembre de 2011)
+  - Versión 6 (Junio de 2015)
+  - Versión 7 (En desarrollo)
 
 - **Compatibilidad:**
-	- [ECMA6](https://kangax.github.io/compat-table/es6/)
-	- [ECMA5](http://kangax.github.io/compat-table/es5/)
-	- [Non-standard](http://kangax.github.io/compat-table/non-standard/)
-	- [HTML5 & CSS3](http://fmbip.com/litmus/)
-	- [Polyfill](https://www.wikiwand.com/en/Polyfill)
+  - [ECMA6](https://kangax.github.io/compat-table/es6/)
+  - [ECMA5](http://kangax.github.io/compat-table/es5/)
+  - [Non-standard](http://kangax.github.io/compat-table/non-standard/)
+  - [HTML5 & CSS3](http://fmbip.com/litmus/)
+  - [Polyfill](https://www.wikiwand.com/en/Polyfill)
 
 - **Compiladores**
-	- [Coffeescript](http://coffeescript.org/)
-	- [Typescript](http://www.typescriptlang.org/)
+  - [Coffeescript](http://coffeescript.org/)
+  - [Typescript](http://www.typescriptlang.org/)
   - [Dart](https://www.dartlang.org/)
 
 - **Librerías**
-	- [Jquery](https://jquery.com/)
-	- [D3.js](http://d3js.org/)
-	- [Modernizr](https://modernizr.com/)
-	- [Lodash](https://lodash.com/)
-	- [mustache.js](https://github.com/janl/mustache.js)
-	- [handlebars.js](http://handlebarsjs.com/)
-	- [Firebase](http://firebase.com/)
+  - [Jquery](https://jquery.com/)
+  - [D3.js](http://d3js.org/)
+  - [Modernizr](https://modernizr.com/)
+  - [Lodash](https://lodash.com/)
+  - [mustache.js](https://github.com/janl/mustache.js)
+  - [handlebars.js](http://handlebarsjs.com/)
+  - [Firebase](http://firebase.com/)
 
 - **Frameworks (MV*)**
-	- [Angular.js](https://angularjs.org/)
-	- [Ember.js](http://emberjs.com/)
-	- [Backbone.js](http://backbonejs.org/)
-	- [KnockOut.js](http://knockoutjs.com/)
-	- [React](http://facebook.github.io/react/)
-	- [Meteor](https://www.meteor.com/)
+  - [Angular.js](https://angularjs.org/)
+  - [Ember.js](http://emberjs.com/)
+  - [Backbone.js](http://backbonejs.org/)
+  - [KnockOut.js](http://knockoutjs.com/)
+  - [React](http://facebook.github.io/react/)
+  - [Meteor](https://www.meteor.com/)
   - [Vue](https://vuejs.org/)
 
 - **JavaScript en el servidor**
- 	- [Grunt](http://gruntjs.com/)
- 	- [Gulp](http://gulpjs.com/)
- 	- [Bower.io](http://bower.io/)
- 	- [Express](http://expressjs.com/es/)
- 	- [Pillarsjs](http://pillarsjs.com/)
- 	- [MongoDB](https://www.mongodb.org/)
- 	- [Socket.io](http://socket.io/)
- 	- [Electron.io](http://electron.atom.io/)
- 	- [Johnny-five.io](http://johnny-five.io/)
+  - [Grunt](http://gruntjs.com/)
+  - [Gulp](http://gulpjs.com/)
+  - [Bower.io](http://bower.io/)
+  - [Express](http://expressjs.com/es/)
+  - [Pillarsjs](http://pillarsjs.com/)
+  - [MongoDB](https://www.mongodb.org/)
+  - [Socket.io](http://socket.io/)
+  - [Electron.io](http://electron.atom.io/)
+  - [Johnny-five.io](http://johnny-five.io/)
 
 - **[El estado del desarrollo Front-End en 2015 por Ashley Nolan](http://ashleynolan.co.uk/blog/frontend-tooling-survey-2015-results)**
 
@@ -205,7 +205,7 @@
 ### Back-end
   
 - **NODE - JavaScript en el servidor**
- 	- [Node.js](https://nodejs.org/en/)
+  - [Node.js](https://nodejs.org/en/)
 
 
 - **Python**
@@ -348,7 +348,7 @@
 ### Github
 
 - [Socializacion](https://guides.github.com/activities/socialize/)
-	- Perfil
+  - Perfil
 - Timeline Actividad
 - [Colaborar](https://guides.github.com/activities/contributing-to-open-source/)
 - [Compartir](https://guides.github.com/introduction/getting-your-project-on-github/)
