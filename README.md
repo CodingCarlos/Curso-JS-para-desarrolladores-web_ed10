@@ -39,9 +39,11 @@ Sobre el Curso
 
 Teoría y Recursos
 =================
-| Día    | Teoría                      | Recursos                      |
-| ------ | --------------------------- | ----------------------------- |
-| 24/01  | [Clase 1](teoria/dia1.md)   | [Clase 1](recursos/dia1.md)   |
+| Día    | Teoría                      | Recursos                      | Temática |
+| ------ | --------------------------- | ----------------------------- | ----------------------------- |
+| 24/01  | [Clase 1](teoria/dia1.md)   | [Clase 1](recursos/dia1.md)   | Introduccion a la web y git |
+| 26/01  | [Clase 2](teoria/dia2.md)   | [Clase 2](recursos/dia2.md)   | Entendiendo pseudocódigo |
+
 
 
 Temario
