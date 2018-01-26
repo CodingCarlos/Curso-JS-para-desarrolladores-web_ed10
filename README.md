@@ -32,7 +32,7 @@ Como metodología de trabajo durante el curso, los alumnos desarrollarán como p
 
 Sobre el Curso
 =================
-* Horario: Martes y Jueves de 19h a 22h
+* Horario: Lunes, Miércoles y Viernes de 19h a 22h
 * Fechas: 24/01/2010 - 26/02/2018
 * No lectivos: -
 
