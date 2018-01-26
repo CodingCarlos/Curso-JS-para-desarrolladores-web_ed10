@@ -108,8 +108,8 @@
 	@contador = 5
 
 	repetir si @contador>0
-	@contador = @contador - 1
-	mostrar @contador
+		@contador = @contador - 1
+		mostrar @contador
   ```
   - Para (for)
   Se ejecutará un número limitado de veces.
@@ -117,14 +117,14 @@
 	@contador = 0
 	
 	repetir 5 // o repetir nº de veces en una variable
-	@contador = @contador + 1
-	mostrar @contador
+		@contador = @contador + 1
+		mostrar @contador
   ```
   - For each
   Se ejecuta por cada elemento en una lista (array).
   ```
 	por cada @cosa en @lista
-	mostrar @cosa
+		mostrar @cosa
   ```
 
 
