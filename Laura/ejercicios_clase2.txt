@@ -1,1 +1,32 @@
 Ejercicios clase 2
+
+Ejercicio_1 
+
+pedir @x
+pedir @y
+
+//procedimientos
+procedimiento #suma @x y @y
+	devolver @x + @y
+procedimiento #resta @x y @y
+	devolver @x - @y
+procedimiento #multiplica @x y @y
+	devolver @x * @y
+procedimiento #divide @x y @y
+	devolver @x / @y
+
+// resultados
+@resultadosuma = #suma @x y @y
+@resultadoresta = #resta @x y @y
+@resultadomultiplicacion = #multiplica @x y @y
+@resultadodivision = #divide @x y @y
+
+// mostrar
+mostrar "El resultado de la suma es:"
+mostrar @resultadoSuma
+mostrar "El resultado de la resta es:"
+mostrar @resultadoresta
+mostrar "El resultado de la multiplicación es:"
+mostrar @resultadomultiplicacion
+mostrar "El resultado de la división es:"
+mostrar @resultadodivision
