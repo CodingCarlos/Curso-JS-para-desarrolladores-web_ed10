@@ -1,0 +1,13 @@
+pedir @numero1
+pedir @numero2
+pedir @numero3
+definir @resultado = #ComparacionTresNumeros @numero1 y @numero2 y @numero3
+mostrar @resultado
+
+procedimiento #ComparacionTresNumeros @numero1 y @numero2 y @numero3
+	si @numero1 > @numero2 && @numero1 > @numero3
+		devolver "El " + @numero1 + " es mayor."
+	pero si @numero2 > @numero3 && @numero2 > @numero1
+		devolver "El " + @numero2 + " es mayor."
+	si no
+		devolver "El " + @numero3 + " es mayor."
