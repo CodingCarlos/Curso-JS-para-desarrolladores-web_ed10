@@ -1,0 +1,215 @@
+
+ 
+//////////////////// Ejercicio_1 
+
+pedir @x
+pedir @y
+
+//procedimientos
+procedimiento #suma @x y @y
+	devolver @x + @y
+procedimiento #resta @x y @y
+	devolver @x - @y
+procedimiento #multiplica @x y @y
+	devolver @x * @y
+procedimiento #divide @x y @y
+	devolver @x / @y
+
+// resultados
+@resultadosuma = #suma @x y @y
+@resultadoresta = #resta @x y @y
+@resultadomultiplicacion = #multiplica @x y @y
+@resultadodivision = #divide @x y @y
+
+// mostrar
+mostrar "El resultado de la suma es:"
+mostrar @resultadoSuma
+mostrar "El resultado de la resta es:"
+mostrar @resultadoresta
+mostrar "El resultado de la multiplicación es:"
+mostrar @resultadomultiplicacion
+mostrar "El resultado de la división es:"
+mostrar @resultadodivision
+
+
+
+//////////////////// Ejercicio 2 
+
+// pedimos datos
+pedir @numeroDeHombres
+pedir @numeroDeMujeres
+
+// obtenemos el total
+procedimiento #total @numeroDeHombres y @numeroDeMujeres
+	devolver @numeroDeHombres + @numeroDeMujeres
+@total = #total @numeroDeHombres y @numeroDeMujeres
+
+// obtenemos porcentajes
+procedimiento #porcentajeHombres @numeroDeHombres y @total
+	devolver @numeroDeHombres * 100 / @total
+
+procedimiento #porcentajeMujeres @numeroDeMujeres y @total
+	devolver @numeroDeMujeres * 100 / @total
+
+// mostramos resultados
+mostrar "El porcentaje de hombres en clase es"
+mostrar #porcentajeHombres @numeroDeHombres y @total
+mostrar "El porcentaje de mujeres en clase es"
+mostrar #porcentajeMujeres @numeroDeMujeres y @total
+
+
+
+//////////////////// Ejercicio 3
+
+pedir @numeroA
+pedir @numeroB
+
+si @numeroA > @numeroB
+	mostrar "A es mayor que B"
+pero si @numeroA < @numeroB
+	mostrar "B es mayor que A"
+si no
+	mostrar "A es igual que B"
+
+
+
+
+//////////////////// Ejercicio 4
+
+pedir @numeroA
+pedir @numeroB
+pedir @numeroC
+
+si @numeroA > @numeroB
+	si @numeroA > @numeroC
+		mostrar "A es el mayor"
+
+pero si @numeroB > @numeroA
+	si @numeroB > @numeroC
+		mostrar "B es el mayor"
+
+si @numeroC > @numeroA
+	si @numeroC > @numeroB
+		mostrar "C es el mayor"
+
+pero si @numeroA == @numeroB == @numeroC
+	mostrar "son iguales"
+
+
+
+
+//////////////////// Ejercicio 5
+
+
+pedir @numeroA
+pedir @numeroB
+pedir @numeroC
+
+si @numeroA < 0
+	@operacion = @numeroB + @numeroC
+	
+si no
+	@operacion = @numeroA * @numeroB * @numeroC
+
+mostrar "El resultado de la operación ha sido"
+mostrar @operacion
+
+
+
+
+//////////////////// Ejercicio 6
+
+
+pedir @mes
+pedir @diaSemana
+pedir @precio
+
+@descuento = @precio * 0.25
+@precioFinal = @precio - @descuento
+
+si @mes == "Diciembre" || @mes == "Enero" || @mes == "Febrero"
+	si @diaSemana == "Viernes" || @diasemana == "Sabado" || @diasemana  == "Domingo"
+    mostrar "no hay descuento por ser fin de semana"
+    mostrar @precio
+
+    si no
+        mostrar "tu producto tiene descuento"
+        mostrar @precioFinal
+
+si no
+	mostrar "no estamos de rebajas"
+	mostrar @precio
+
+
+
+
+
+//////////////////// Ejercicio 7
+
+pedir @numeroA
+
+si @numeroA > 0
+	mostrar @numeroA + " es positivo"
+
+si no
+	mostrar @numeroA + " es negativo"
+
+
+
+
+
+//////////////////// Ejercicio 9
+
+pedir @introduceTuClave
+
+si @introduceTuClave == "Fictizia mola mucho"
+	mostrar "Enhorabuena, clave correcta"
+si no
+	mostrar "Oh no, no te queda intentos"
+	repetir 2
+		pedir @introduceTuClave
+
+
+
+
+
+//////////////////// Ejercicio 11
+
+pedir @numero
+@frase = "el número romano equivalente es"
+
+si @numero == 1
+	mostrar @frase + " I"
+
+si @numero == 2
+	mostrar @frase + " II"
+
+si @numero == 3
+	mostrar @frase + " III"
+
+si @numero == 4
+	mostrar @frase + " IV"
+
+si @numero == 5
+	mostrar @frase + " V"
+
+si @numero == 6
+	mostrar @frase + " VI"
+
+si @numero == 7
+	mostrar @frase + " VII"
+
+si @numero == 8
+	mostrar @frase + " VIII"
+
+si @numero == 9
+	mostrar @frase + " IX"
+
+si @numero == 10
+	mostrar @frase + " X"
+
+si no
+	mostrar "su número no está registrado"
+
+
+
