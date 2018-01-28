@@ -1,0 +1,10 @@
+pedir @hombres
+pedir @mujeres
+definir @resultado = #porcentajeGeneros @mujeres y @hombres
+mostrar @resultado
+
+procedimiento #porcentajeGeneros @mujeres y @hombres
+	definir @total = @hombres + @mujeres
+	definir @porcentajeHombres = @hombres * 100 / @total
+	definir @porcentajeMujeres = @mujeres * 100 / @total
+	devolver "El porcentaje de hombres es " + @porcentajeHombres + " y el de mujeres es " + @porcentajeMujeres
