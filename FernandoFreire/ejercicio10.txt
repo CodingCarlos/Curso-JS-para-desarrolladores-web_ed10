@@ -1,0 +1,68 @@
+//Declaración variables
+pedir @dia
+pedir @mes
+pedir @ano
+
+//Llamada de las funciones
+definir @diavalido = #obtenerDia @dia
+si @diavalido == 1
+	definir @mesvalido = #obtenerMes @dia y @mes
+
+si @diavalido == 1 && @mesvalido != 0
+	definir @anovalido = #obtenerAno @ano
+
+
+//Mostrar resultado
+si @diavalido == 1 && @mesvalido != 0 && @anovalido == 1
+	mostrar "Fecha corta: " + @dia + "/" + @mes + "/" + @ano
+	mostrar "Fecha larga: " + @dia + " de " + @mesvalido + " de " + @ano
+
+
+//Validación dia
+#obtenerDia @dia
+	si @dia <= 31 && @dia > 0
+		devolver 1
+	si no
+		mostrar "El dia es incorrecto"
+		devolver 0
+
+//Validación mes
+#obtenerMes @dia y @mes
+	si @mes > 0 && @mes < 13
+		si @dia == 28 && @mes == 2
+			devolver "Febrero"
+		pero si @dia == 30 && @mes == 4 || @mes == 6 || @mes == 9 || @mes == 11
+			si @mes == 4
+				devolver "Abril"
+			pero si @mes == 6
+				devolver "Junio"
+			pero si @mes == 9
+				devolver "Septiembre"
+			pero si @mes == 11
+				devolver "Noviembre"
+		pero si @dia == 31 && @mes == 1 || @mes == 3 || @mes == 5 || @mes == 7 || @mes == 8 || @mes == 10 || @mes == 12
+			si @mes == 1
+				devolver "Enero"
+			pero si @mes == 3
+				devolver "Marzo"
+			pero si @mes == 5
+				devolver "Mayo"
+			pero si @mes == 7
+				devolver "Julio"
+			pero si @mes == 8
+				devolver "Agosto"
+			pero si @mes == 10
+				devolver "Octubre"
+			pero si @mes == 12
+				devolver "Diciembre"
+	si no
+		mostrar "El mes es incorrecto"
+		devolver 0
+
+//Validación año
+#obtenerAno @ano
+	si @ano < 2030 && @ano >= 2000
+		devolver 1
+	si no
+		mostrar "El año no es valido"
+		devolver 0
