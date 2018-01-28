@@ -1,0 +1,9 @@
+definir @contador = 0
+repetir si @contador < 3
+	pedir @palabra
+	si @palabra == "Fictizia"
+		mostrar "Usted se ha logado correctamente"
+		@contador = 3
+	si no
+		@contador = @contador + 1
+		mostrar "Vuelva a intentarlo"
