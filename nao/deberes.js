@@ -15,10 +15,6 @@ mostrar @resultado
 
 procedimiento #resultadoProducto
 @resultado = @a * @b
-mostrar = @resultado 
-
-procedimiento #resultadoDivision
-@resultado = @a / @b
 mostrar @resultado
 
 // EJERCICIO 2 /////////////////////////////////////////////
