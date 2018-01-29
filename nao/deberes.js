@@ -147,17 +147,30 @@ repetir 3
 
 pedir @dia
 pedir @mes
-pedir @anyo
 
-//--------------
+@valido = "si"
 
-si @dia <= 31
-si @mes <= 12
-si @mes == 1
-si @mes == 2
-	mostrar "febrero"
-si @mes == 3
-	mostrar "marzo"
+si @dia > 31
+	@valido = "no"
+	mostrar "Día inválido"
+si @mes > 12
+	@valido = "no"
+	mostrar "Mes inválido"
+
+//Meses de menos de 31 días
+si @valido == "si"
+	si @mes == 2 && @dia > 27
+		@valido = "no"
+		mostrar "Día inválido"
+	si @mes == 4 || @mes == 6 || @mes == 9 || @mes == 11
+	si @dia > 30
+		@valido = "no"
+		mostrar "Día inválido"
+	si @valido == "si"
+		mostrar @dia + '/' + @mes + '/' + @anyo
+si no
+	mostrar "No podemos validad tu fecha"
+
 
 
 // EJERCICIO 11 /////////////////////////////////////
