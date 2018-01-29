@@ -134,15 +134,13 @@ si no
 
 // EJERCICIO 9 ///////////////////////////////////
 
-pedir @palabraClave
 
-//------------
-
-si @palabraClave == "Fictizia mola mucho"
-	mostrar "correcto, puedes entrar"
-si no
-	mostrar "No puedes entrar"
-
+repetir 3
+	pedir @palabraClave
+	si @palabraClave == "Fictizia mola mucho"
+		mostrar "correcto, puedes entrar"
+	si no
+		mostrar "No puedes entrar"
 
 
 // EJERCICIO 10 /////////////////////////////////////
