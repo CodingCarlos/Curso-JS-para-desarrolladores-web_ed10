@@ -16,4 +16,4 @@ procedimiento #dividir @a y @b
 mostrar #sumar @numero1 y @numero2
 mostrar #restar @numero1 y @numero2
 mostrar #multiplicar @numero1 y @numero2
-mostrar #dividir @numero1 y @numero2}
+mostrar #dividir @numero1 y @numero2
