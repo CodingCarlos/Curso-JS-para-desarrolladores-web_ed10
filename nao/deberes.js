@@ -56,7 +56,9 @@ pedir @c
 
 si @a > @b
 	si @a > @c
-	mostrar "A es el mayor"
+		mostrar "A es el mayor"
+	si no
+		mostrar "C es el mayor"
 pero si @b > @c
 	mostrar "B es el mayor"
 si no
