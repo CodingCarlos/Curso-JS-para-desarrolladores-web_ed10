@@ -147,6 +147,7 @@ repetir 3
 
 pedir @dia
 pedir @mes
+pedir @anyo
 
 @valido = "si"
 
@@ -167,9 +168,23 @@ si @valido == "si"
 		@valido = "no"
 		mostrar "Día inválido"
 	si @valido == "si"
+		si @dia < 10
+			@dia = "0" + @dia
+		si @mes < 10
+			@mes = "0" + @mes
+		si @anyo < 1000
+			si @anyo < 100
+				si @anyo < 10
+					@anyo = "000" + @anyo
+				si no
+                	@anyo = "00" + @anyo
+			si no
+        	@anyo = "0" + @anyo
 		mostrar @dia + '/' + @mes + '/' + @anyo
 si no
 	mostrar "No podemos validad tu fecha"
+
+
 
 
 
