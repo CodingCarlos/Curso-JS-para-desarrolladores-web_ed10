@@ -94,13 +94,15 @@ pedir @diaSemana
 
 //------------
 
-si @mes == "diciembre" o @mes == "enero" o @mes == "febrero"
-	si @diaSemana == "lunes" o "martes" o "miercoles" o "jueves"
+si @mes == "diciembre" || @mes == "enero" || @mes == "febrero"
+	si @diaSemana == "lunes" || "martes" || "miercoles" || "jueves"
 		mostrar "Tienes un descuento del 25%"
-		mostrar @precioFinal
-	si no 
-    	mostrar "No tienes descuento; ven en fin de semana" 
-		mostrar @precio
+		mostrar "Tu precio final es" + @precioFinal
+	si no
+		mostrar "No tienes descuento; ven en fin de semana"
+		mostrar "Tu precio final es " + @precio
+si no
+mostrar "Ven en invierno"
 
 // EJERCICIO 7 //////////////////////////////////////
 
