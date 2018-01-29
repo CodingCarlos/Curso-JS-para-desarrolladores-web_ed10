@@ -1,0 +1,14 @@
+pedir @precio
+pedir @mes
+pedir @dia
+definir @resultado = #DescuentoProducto @precio y @mes y @dia
+mostrar @resultado
+
+procedimiento #DescuentoProducto @precio y @mes y @dia
+	si @mes != "diciembre" && @mes != "enero" && @mes != "febrero" && @mes != "marzo"
+		si @dia != "viernes" && @dia != "sabado" && @dia != "domingo"
+		definir @descuento = @precio * 0.25
+		definir @resultado = @precio - @descuento
+		devolver @resultado
+	si no
+		devolver "La estación o el dia son equivocados"

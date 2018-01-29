@@ -1,0 +1,9 @@
+pedir @numero
+definir @resultado = #NaturalezaNumero @numero
+mostrar @resultado
+
+procedimiento #NaturalezaNumero @numero
+	si @numero < 0
+		devolver "El numero " + @numero + " es negativo"
+	si no
+		devolver "El numero " + @numero + " es positivo"

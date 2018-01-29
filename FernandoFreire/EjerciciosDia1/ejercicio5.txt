@@ -1,0 +1,13 @@
+pedir @numero1
+pedir @numero2
+pedir @numero3
+definir @resultado = #ComparacionTresNumeros @numero1 y @numero2 y @numero3
+mostrar @resultado
+
+procedimiento #ComparacionTresNumeros @numero1 y @numero2 y @numero3
+	si @numero1 < 0
+		definir @suma = @numero2 + @numero3
+		devolver "Se suman los otros dos. El resultado es " + @suma
+	si no
+		definir @multiplicacion = @numero1 * @numero2
+		devolver "El resultado de la multiplicacion es " + @multiplicacion * @numero3

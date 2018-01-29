@@ -1,0 +1,26 @@
+pedir @numero1
+pedir @numero2
+definir @resultadoSuma = #sumaDosNumeros @numero1 y @numero2
+definir @resultadoResta = #restaDosNumeros @numero1 y @numero2
+definir @resultadoMultiplicacion = #multiplicacionDosNumeros @numero1 y @numero2
+definir @resultadoDivision = #divisionDosNumeros @numero1 y @numero2
+mostrar "El resultado de la suma es " + @resultadoSuma
+mostrar "El resultado de la resta es " + @resultadoResta
+mostrar "El resultado de la multiplicacion es " + @resultadoMultiplicacion
+mostrar "El resultado de la division es " + @resultadoDivision
+
+procedimiento #sumaDosNumeros @numero1 y @numero2
+	definir @resultado = @numero1 + @numero2
+	devolver @resultado
+
+procedimiento #restaDosNumeros @numero1 y @numero2
+	definir @resultado = @numero1 - @numero2
+	devolver @resultado
+
+procedimiento #multiplicacionDosNumeros @numero1 y @numero2
+	definir @resultado = @numero1 * @numero2
+	devolver @resultado
+
+procedimiento #divisionDosNumeros @numero1 y @numero2
+	definir @resultado = @numero1 / @numero2
+	devolver @resultado

@@ -1,0 +1,12 @@
+pedir @numero1
+pedir @numero2
+definir @resultado = #ComparacionDosNumeros @numero1 y @numero2
+mostrar @resultado
+
+procedimiento #ComparacionDosNumeros @numero1 y @numero2
+	si @numero1 > @numero2
+		devolver "El " + @numero1 + " es mayor."
+	pero si @numero1 < @numero2
+		devolver "El " + @numero2 + " es mayor."
+	si no
+		devolver "Son iguales."
