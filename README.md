@@ -43,7 +43,8 @@ Teoría y Recursos
 | ------ | --------------------------- | ----------------------------- | ----------------------------- |
 | 24/01  | [Clase 1](teoria/dia1.md)   | [Clase 1](recursos/dia1.md)   | Introduccion a la web y git |
 | 26/01  | [Clase 2](teoria/dia2.md)   | [Clase 2](recursos/dia2.md)   | Entendiendo pseudocódigo |
-| 29/01 | [Clase 3](teoria/dia3.md)   | [Clase 3](recursos/dia3.md)   | Empezando con JS y la consola |
+| 29/01  | [Clase 3](teoria/dia3.md)   | [Clase 3](recursos/dia3.md)   | Empezando con JS y la consola |
+| 31/01  | [Clase 4](teoria/dia4.md)   | [Clase 4](recursos/dia4.md)   | Caracteres especiales, scope, funciones básicas y trucos de consola |
 
 
 
