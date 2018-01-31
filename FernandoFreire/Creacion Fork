@@ -1,0 +1,10 @@
+Para crear un Fork: A diferencia del primer dia donde todos tirabamos al mismo repositorio, esta vez clonamos el repositorio desde master para hacer cambios propios sin depender o estar condicionado de los demás.
+
+1. Creamos una carpeta con el nombre de Git.
+2. Dentro con mkdir MiFork, otra carpeta.
+3. Clonamos el repositorio personal. Git clone https://github.com/Wolferules/Curso-JS-para-desarrolladores-web_ed10.git . (Este punto final es para que cree el repositorio sin crear una nueva carpeta).
+4. Cambiamnos un archivo cualquiera.
+5. Lo añadimos con git add.
+6. Hacemos git commit -m "Descripción cambio"
+7. Git push para subir el archivo. Ahora ya está en mi repositorio.
+8. Me voy al repositorio principal
