@@ -50,6 +50,31 @@ function showImpares (numero){
 
 }
 
+//Ejercicio 5 Diseña un programa que imprima los números impares entre un número dado por el usuario y los siguientes 50 números.
+
+
+
+
+imprimeImpares(inicio);
+
+
+function imprimeImpares(inicio) {
+		//El número inicial
+	var inicio = 1;
+		//El número final
+	var cierre = inicio + 50;
+		//Bucle
+	for (var i = inicio; i < cierre ; i++) {
+		
+		if (i % 2 !== 0) {
+			console.log(i);
+		}
+
+	} 
+
+}
+
+
 
 
 
