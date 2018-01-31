@@ -1,0 +1,132 @@
+<script>
+
+// ejercicio 1
+
+
+/*
+Proceso esBisiesto
+		
+		Escribir "Dime el Año:"
+		Leer year
+		
+		Si year % 4 = 0 & year % 100 <> 0 Entonces
+			Escribir "Amigo, el año " year " es bisiesto!"
+		Sino
+			Si year % 400 = 0 & year % 100 = 0 Entonces
+				Escribir "Amigo, el año " year " es bisiesto!"
+			Sino
+				Escribir "Amigo, el año " year " NO es bisiesto!"
+			Fin Si
+		Fin Si
+		
+	FinProceso 
+*/ 
+
+
+function esBisiesto() {
+	// comprobará si es bisiesto..
+	//console.log("Dime el Año")
+	var year = prompt("dime el año");
+	if (year % 4 == 0 && year % 100 != 0){
+		console.log("Amigo, el año "+ year +" es bisiesto!");
+	}
+	else {
+		if (year % 400 == 0 && year % 100 == 0){
+			console.log("Amigo, el año "+ year +" es bisiesto!");
+
+		}
+		else {
+			console.log("Amigo, el año "+ year +" es bisiesto!");
+		}
+	}
+
+}
+
+esBisiesto();
+
+// ejercicio 2
+
+/*
+Proceso contadorPositivo
+		
+		controlador = 1
+		
+		Escribir "Empieza la cuenta!"
+		
+		Mientras controlador <= 100 Hacer
+			Escribir controlador
+			controlador = controlador +1
+		Fin Mientras
+		
+		Escribir "Terminó la cuenta mágica..."
+		
+	FinProceso
+*/
+
+for (var i=1; i <= 100; i++){
+	console.log(i)
+}
+
+console.log  ("Terminó la cuenta mágica...")
+
+// ejercicio 3
+
+/*
+Proceso contadorNegativo
+		
+		controlador = 100
+		
+		Escribir "Empieza la cuenta!"
+		
+		Mientras controlador >= 0 Hacer
+			Escribir controlador
+			controlador = controlador -1
+		Fin Mientras
+		
+		Escribir "Terminó la cuenta mágica..."
+		
+	FinProceso
+*/
+
+for (var i=100; i >= 0; i--){
+	console.log(i)
+}
+
+console.log  ("Terminó la cuenta mágica...")
+
+
+// ejercicio 4
+
+/*
+Proceso contadorPares
+		
+		controlador = 2
+		
+		Escribir "Empieza la cuenta!"
+		
+		Mientras controlador <= 100 Hacer
+			Escribir controlador
+			controlador = controlador +2
+		Fin Mientras
+		
+		Escribir "Terminó la cuenta mágica..."
+		
+	FinProceso
+*/
+
+console.log ("Empieza la cuenta!")
+for (var i=2; i <= 100; i = i + 2){
+	console.log(i)
+}
+console.log ("Terminó la cuenta!")
+
+// ejercicio 5
+
+
+
+
+
+
+
+
+</script>
