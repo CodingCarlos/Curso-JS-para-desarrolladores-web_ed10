@@ -7,3 +7,4 @@ Para crear un Fork: A diferencia del primer dia donde todos tirabamos al mismo r
 5. Lo añadimos con git add.
 6. Hacemos git commit -m "Descripción cambio"
 7. Git push para subir el archivo. Ahora ya está en mi repositorio.
+8. Me voy al repositorio principal
