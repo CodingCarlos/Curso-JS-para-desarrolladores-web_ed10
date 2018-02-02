@@ -1,4 +1,11 @@
-// Ejercicio 1
+/*
+1. Diseña un programa que nos confirme si un año es bisiesto o no.
+
+Caracteristicas de un año bisiesto:
+Tiene que ser divisible entre 4 y no tiene que ser divisible entre 100
+O puede ser divisble entre 100 y entre 400
+*/
+
 var year = prompt("Dime el año:");
 
 function esBisiesto() {
@@ -12,7 +19,7 @@ function esBisiesto() {
 }
 esBisiesto();
 
-// Ejercicio 2
+//2. Diseña un programa que imprima los numeros del 1 al 100.
 function contadorPositivo() {
 	console.log("Empieza la cuenta");
 	for (var i = 1; i <= 100; i++) {
@@ -23,7 +30,7 @@ function contadorPositivo() {
 contadorPositivo();
 
 
-// Ejercicio3
+//3. Diseña un programa que imprima los numeros del 100 al 0.
 function contadorNegativo() {
 	console.log("Empieza la cuenta");
 	for (var i = 100; i >= 0; i--) {
@@ -33,7 +40,7 @@ function contadorNegativo() {
 contadorNegativo();
 
 
-// Ejercicio 4
+//4. Diseña un programa que imprima los numeros pares entre 0 y 100.
 function contadorPares() {
 	console.log("Empieza la cuenta");
 	for (var i = 0; i <= 100; i++) {
@@ -50,35 +57,21 @@ function showImpares (numero){
 
 }
 
-//Ejercicio 5 Diseña un programa que imprima los números impares entre un número dado por el usuario y los siguientes 50 números.
+//5 Diseña un programa que imprima los números impares entre un número dado por el usuario y los siguientes 50 números.
 
+var inicio = Number(prompt("Dime un número"));
 
-
-
-imprimeImpares(inicio);
-
-
-function imprimeImpares(inicio) {
-		//El número inicial
-	var inicio = 1;
-		//El número final
-	var cierre = inicio + 50;
+function muestraImpares(inicio){
+	var limit = inicio + 50;
 		//Bucle
-	for (var i = inicio; i < cierre ; i++) {
-		
-		if (i % 2 !== 0) {
-			console.log(i);
+	for (inicio; inicio <= limit ; inicio++) {
+		if (inicio % 2 != 0) {
+			console.log(inicio);
 		}
-
-	} 
-
-}
-
-
-
-
-
-
+	}
+} 
+muestraImpares(inicio);
+	
 
 
 
