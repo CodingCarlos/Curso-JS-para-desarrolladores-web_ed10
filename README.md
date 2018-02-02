@@ -45,6 +45,7 @@ Teoría y Recursos
 | 26/01  | [Clase 2](teoria/dia2.md)   | [Clase 2](recursos/dia2.md)   | Entendiendo pseudocódigo |
 | 29/01  | [Clase 3](teoria/dia3.md)   | [Clase 3](recursos/dia3.md)   | Empezando con JS y la consola |
 | 31/01  | [Clase 4](teoria/dia4.md)   | [Clase 4](recursos/dia4.md)   | Caracteres especiales, scope, funciones básicas y trucos de consola |
+| 02/02  | [Clase 5](teoria/dia5.md)   | [Clase 5](recursos/dia5.md)   | Asincronía (callbacks, promesas, async/await), bucles y condicionales complejos |
 
 
 
