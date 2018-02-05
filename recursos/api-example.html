@@ -1,0 +1,52 @@
+<html>
+
+
+	<body>
+
+		<div id="resultado"></div>
+
+		<button id="cambiar">Cambiar</button>
+
+
+		<script>
+
+			// Escribir en el div #resultado
+			var resultado = document.getElementById("resultado");
+			resultado.innerHTML = "Hola";	
+
+
+
+			async function pilladatos (cb) {
+
+			  var url = 'https://randomuser.me/api';
+			  
+			  var firstData = await fetch(url);
+			  
+			  // only proceed once promise is resolved
+			  var data = await firstData.json();
+			  
+			  // only proceed once second promise is resolved
+			  return data;
+			}
+
+
+
+			// Escribe "Adios" en #resultado
+			async function escribeAdios(e) {
+
+				var randomuser = await pilladatos();
+				var email = randomuser.results[0].email
+
+				resultado.innerHTML = email;
+			}
+
+			// Escuchar el evento click del botón
+			var botonCambiar = document.getElementById('cambiar')
+			botonCambiar.addEventListener("click", escribeAdios);
+
+
+		</script>
+
+	</body>
+
+</html>
