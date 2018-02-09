@@ -48,6 +48,7 @@ Teoría y Recursos
 | 02/02  | [Clase 5](teoria/dia5.md)   | [Clase 5](recursos/dia5.md)   | Asincronía (callbacks, promesas, async/await), bucles y condicionales complejos |
 | 05/02  | [Clase 6](teoria/dia6.md)   | [Clase 6](recursos/dia6.md)   | Introduccion al DOM y AJAX (fetch) |
 | 07/02  | [Clase 7](teoria/dia7.md)   | [Clase 7](recursos/dia7.md)   | Números, Math y Dates |
+| 09/02  | [Clase 8](teoria/dia8.md)   | [Clase 8](recursos/dia8.md)   | Strings y Arrays (+proTip de fechas) |
 
 
 
