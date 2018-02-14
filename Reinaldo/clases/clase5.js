@@ -6,7 +6,7 @@ var luna = true;
 console.log("es de", sol ? luna ? 'dia con eclipse' : 'dia' : ' noche');
 
 
-var tema = "medio";
+var tema = "otro";
 
 switch(tema){
 	case "claro":

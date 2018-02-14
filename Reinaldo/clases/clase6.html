@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM Event Example</title>
+
+<style>
+#t { border: 1px solid red }
+#t1 { background-color: pink; }
+</style>
+
+<script>
+// Function to change the content of t2
+function modifyText() {
+  var t2 = document.getElementById("t2");
+  t2.firstChild.nodeValue = "three"; // <-nodeValue también añade texto uso algo mas complejo...    
+}
+ 
+// Function to add event listener to t
+function load() { 
+  var el = document.getElementById("t"); 
+  el.addEventListener("click", modifyText, false); // <- false y no poner nada es lo mismo
+} 
+
+document.addEventListener("DOMContentLoaded", load, false);
+</script>
+
+</head>
+<body>
+
+<table id="t"> 
+   <tr><td id="t1">one</td></tr>
+   <tr><td id="t2">two</td></tr>
+</table>
+
+</body> 
+</html>
