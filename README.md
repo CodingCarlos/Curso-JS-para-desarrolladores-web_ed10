@@ -50,6 +50,7 @@ Teoría y Recursos
 | 07/02  | [Clase 7](teoria/dia7.md)   | [Clase 7](recursos/dia7.md)   | Números, Math y Dates |
 | 09/02  | [Clase 8](teoria/dia8.md)   | [Clase 8](recursos/dia8.md)   | Strings y Arrays (+proTip de fechas) |
 | 12/02  | [Clase 9](teoria/dia9.md)   | [Clase 9](recursos/dia9.md)   | Objetos y funciones |
+| 14/02  | [Clase 10](teoria/dia10.md) | [Clase 10](recursos/dia10.md) | Repaso del scope, funciones avanzadas y asincronía |
 
 
 
