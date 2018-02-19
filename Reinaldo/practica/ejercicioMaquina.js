@@ -36,6 +36,7 @@ var maquina = {
     }
     var encontrado = clientes.indexOf(cliente);
     if (encontrado > -1){
+      console.log("cliente existe");
       return false;
     }
     if (cliente.hasOwnProperty("nombre") === true
@@ -45,21 +46,27 @@ var maquina = {
     && cliente.hasOwnProperty("presupuesto") === true
     && cliente.hasOwnProperty("productos") === true) {
         this.clientes.push(cliente);
+        console.log("cliente agregado " , cliente);
     }
- return false;
-
+    console.log("cliente no valido");
   },
+  // metodo para quitar cliente
   quitarCliente: function(password, cliente) {
     if (this.isAdmin(password) === false )  {
       console.log("no eres admin");
       return false;
     }
     var encontrado = clientes.indexOf(cliente);
+    // -1 es lo que devuelve la función cuando no encuentra el objeto en el array
     if (encontrado > -1){
       this.clientes[encontrado] = undefined;
+      console.log("cliente ha sido eliminado");
+    } else {
+      console.log("cliente no existe");
     }
     return encontrado;
   },
+  // metodo login
   login: function(login, clave){
     for (var i = 0; i < this.clientes.length; i++) {
       var cliente = this.clientes[i];
@@ -70,6 +77,7 @@ var maquina = {
     return false;
 
   },
+  // método Consultar Saldo
   consultarSaldo: function(cliente){
     var encontrado = clientes.indexOf(cliente);
     if (encontrado > -1){
@@ -77,6 +85,7 @@ var maquina = {
     }
     return encontrado;
   },
+  // método Consultar gastos
   consultarGastos: function(cliente){
     var encontrado = clientes.indexOf(cliente);
     if (encontrado > -1){
@@ -86,7 +95,7 @@ var maquina = {
   }
 }
 
-// Paso 2 - Creamos los primeros objetos básicos:
+// Paso 2 - Creamos los primeros perfiles en el Array de clientes:
 
 var cliente1 = {
     nombre: "Pedro",
@@ -114,8 +123,9 @@ var cliente2 = {
 
 var adminPassword = "ficticiaMola";
 
-maquina.agregarCliente(cliente1);
-maquina.agregarCliente(cliente2);
+maquina.agregarCliente(adminPassword, cliente1);
+maquina.agregarCliente(adminPassword, cliente2);
+maquina.quitarCliente(adminPassword, cliente1);
 
 var cliente = maquina.login("Pedrito", "1234");
 if (cliente !== false ) {
