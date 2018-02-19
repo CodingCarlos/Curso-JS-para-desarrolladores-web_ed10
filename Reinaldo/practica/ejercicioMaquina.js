@@ -18,9 +18,11 @@ Clientes (Array)*/
 var maquina = {
   adminPassword: "ficticiaMola",
   productos: [
-    {nombre: "chocolate", precio: 20 },
-    {nombre: "cocacola", precio: 30 },
-    {nombre: "agua", precio: 10 },
+    {nombre: "chocolate", precio: 20, stock: 2 },
+    {nombre: "cocacola", precio: 30, stock: 0 },
+    {nombre: "agua", precio: 10, stock: 1 },
+    {nombre: "pepsi", precio: 10, stock: 1 },
+    {nombre: "galletas", precio: 10, stock: 1 }
   ],
   clientes: [],
   // metodo para comprobar el password de admin
@@ -34,11 +36,11 @@ var maquina = {
       console.log("no eres admin");
       return false;
     }
-    var encontrado = clientes.indexOf(cliente);
-    if (encontrado > -1){
-      console.log("cliente existe");
-      return false;
-    }
+    // var encontrado = clientes.indexOf(cliente);
+    // if (encontrado > -1){
+    //   console.log("cliente existe");
+    //   return false;
+    // }
     if (cliente.hasOwnProperty("nombre") === true
     && cliente.hasOwnProperty("usuario") === true
     && cliente.hasOwnProperty("password") === true
@@ -46,7 +48,7 @@ var maquina = {
     && cliente.hasOwnProperty("presupuesto") === true
     && cliente.hasOwnProperty("productos") === true) {
         this.clientes.push(cliente);
-        console.log("cliente agregado " , cliente);
+        console.log("cliente agregado" , cliente);
     }
     console.log("cliente no valido");
   },
@@ -56,10 +58,10 @@ var maquina = {
       console.log("no eres admin");
       return false;
     }
-    var encontrado = clientes.indexOf(cliente);
+    var encontrado = this.clientes.indexOf(cliente);
     // -1 es lo que devuelve la función cuando no encuentra el objeto en el array
     if (encontrado > -1){
-      this.clientes[encontrado] = undefined;
+      this.clientes.splice(encontrado, 1);
       console.log("cliente ha sido eliminado");
     } else {
       console.log("cliente no existe");
@@ -70,16 +72,36 @@ var maquina = {
   login: function(login, clave){
     for (var i = 0; i < this.clientes.length; i++) {
       var cliente = this.clientes[i];
+      console.log(this.clientes);
       if(cliente.usuario === login && cliente.password === clave){
         return cliente;
       }
     }
     return false;
+  },
+  consumirProducto: function(usuario, clave, producto) {
+    if (this.login(usuario, clave) === false )  {
+      console.log("no eres admin");
+      return false;
+    }
+    for (var i = 0; i < this.productos.length; i++) {
+      var esteProducto = this.productos[i];
+      if(esteProducto.nombre === producto && esteProducto.stock > 0){
+        return producto;
+      }
+    }
+    return "-1";
+    for (var i = 0; i < this.productos.length; i++) {
+      var actualizarStock = this.productos[3];
+      if (actualizarStock == true) {
+        // actualizar 
+      }
+    }
 
   },
   // método Consultar Saldo
   consultarSaldo: function(cliente){
-    var encontrado = clientes.indexOf(cliente);
+    var encontrado = this.clientes.indexOf(cliente);
     if (encontrado > -1){
       console.log( "Saldo", cliente.presupuesto);
     }
@@ -87,7 +109,7 @@ var maquina = {
   },
   // método Consultar gastos
   consultarGastos: function(cliente){
-    var encontrado = clientes.indexOf(cliente);
+    var encontrado = this.clientes.indexOf(cliente);
     if (encontrado > -1){
       console.log( "Gastos", cliente.productos);
     }
@@ -100,7 +122,7 @@ var maquina = {
 var cliente1 = {
     nombre: "Pedro",
     usuario: "Pedrito",
-    password: "1234",
+    password: "ficticiaMola",
     tipo: "",
     presupuesto: 100,
     productos: [
@@ -125,7 +147,11 @@ var adminPassword = "ficticiaMola";
 
 maquina.agregarCliente(adminPassword, cliente1);
 maquina.agregarCliente(adminPassword, cliente2);
-maquina.quitarCliente(adminPassword, cliente1);
+maquina.quitarCliente(adminPassword, cliente2);
+maquina.consumirProducto("Pedrito", "ficticiaMola", "chocolate");
+console.log(maquina.consumirProducto("Pedrito", "ficticiaMola", "chocolate"));
+
+
 
 var cliente = maquina.login("Pedrito", "1234");
 if (cliente !== false ) {
