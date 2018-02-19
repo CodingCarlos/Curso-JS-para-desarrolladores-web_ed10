@@ -52,11 +52,7 @@ function showImpares (numero){
 
 //Ejercicio 5 Diseña un programa que imprima los números impares entre un número dado por el usuario y los siguientes 50 números.
 
-
-
-
 imprimeImpares(inicio);
-
 
 function imprimeImpares(inicio) {
 		//El número inicial
