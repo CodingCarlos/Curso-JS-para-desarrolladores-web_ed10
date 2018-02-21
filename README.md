@@ -51,6 +51,9 @@ Teoría y Recursos
 | 09/02  | [Clase 8](teoria/dia8.md)   | [Clase 8](recursos/dia8.md)   | Strings y Arrays (+proTip de fechas) |
 | 12/02  | [Clase 9](teoria/dia9.md)   | [Clase 9](recursos/dia9.md)   | Objetos y funciones |
 | 14/02  | [Clase 10](teoria/dia10.md) | [Clase 10](recursos/dia10.md) | Repaso del scope, funciones avanzadas y asincronía |
+| 16/02  | [Clase 11](teoria/dia11.md) | [Clase 11](recursos/dia11.md) | BOM, DOM y Selectore avanzados |
+| 19/02  | [Clase 12](teoria/dia12.md) | [Clase 12](recursos/dia12.md) | Testing |
+| 21/02  | [Clase 13](teoria/dia13.md) | [Clase 13](recursos/dia13.md) | Eventos, APIs y más AJAX  |
 
 
 
