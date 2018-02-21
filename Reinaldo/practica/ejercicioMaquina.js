@@ -49,8 +49,10 @@ var maquina = {
     && cliente.hasOwnProperty("productos") === true) {
         this.clientes.push(cliente);
         console.log("cliente agregado" , cliente);
+    } else {
+      console.log("cliente no valido");
     }
-    console.log("cliente no valido");
+
   },
   // metodo para quitar cliente
   quitarCliente: function(password, cliente) {
@@ -80,25 +82,52 @@ var maquina = {
     return false;
   },
   consumirProducto: function(usuario, clave, producto) {
-    if (this.login(usuario, clave) === false )  {
-      console.log("no eres admin");
+    var cliente = this.login(usuario, clave);
+    if (cliente === false )  {
+      console.log("no eres un usuario válido");
       return false;
     }
     for (var i = 0; i < this.productos.length; i++) {
       var esteProducto = this.productos[i];
-      if(esteProducto.nombre === producto && esteProducto.stock > 0){
+      if(esteProducto.nombre === producto && esteProducto.stock > 0 && cliente.presupuesto >= esteProducto.precio){
+        //this.actualizarStock(esteProducto);
+        cliente.presupuesto -= esteProducto.precio;
+        cliente.productos.push(esteProducto);
+        esteProducto.stock -=1;
+        console.log("El producto " + producto + " ha sido actualizado");
         return producto;
       }
     }
     return "-1";
-    for (var i = 0; i < this.productos.length; i++) {
-      var actualizarStock = this.productos[3];
-      if (actualizarStock == true) {
-        // actualizar 
-      }
-    }
-
   },
+  agregarProducto: function(password, producto) {
+    // si el password es falso no puede
+    if (this.isAdmin(password) === false )  {
+      console.log("no eres admin");
+      return false;
+    }
+    // var encontrado = clientes.indexOf(cliente);
+    // if (encontrado > -1){
+    //   console.log("cliente existe");
+    //   return false;
+    // }
+    if (producto.hasOwnProperty("nombre") === true
+    && producto.hasOwnProperty("precio") === true
+    && producto.hasOwnProperty("stock") === true) {
+        this.productos.push(producto);
+        console.log("producto agregado" , producto);
+    } else {
+    console.log("producto no valido");
+    }
+  },
+  //   actualizarStock: function(producto){
+  //     var encontrado = this.productos.indexOf(producto);
+  //       if (encontrado > -1){
+  //         this.productos[encontrado].stock -= 1;
+  //         console.log( "actualizarStock", producto.stock);
+  //       }
+  //       return encontrado;
+  // },
   // método Consultar Saldo
   consultarSaldo: function(cliente){
     var encontrado = this.clientes.indexOf(cliente);
@@ -122,7 +151,7 @@ var maquina = {
 var cliente1 = {
     nombre: "Pedro",
     usuario: "Pedrito",
-    password: "ficticiaMola",
+    password: "1234",
     tipo: "",
     presupuesto: 100,
     productos: [
@@ -148,9 +177,9 @@ var adminPassword = "ficticiaMola";
 maquina.agregarCliente(adminPassword, cliente1);
 maquina.agregarCliente(adminPassword, cliente2);
 maquina.quitarCliente(adminPassword, cliente2);
-maquina.consumirProducto("Pedrito", "ficticiaMola", "chocolate");
-console.log(maquina.consumirProducto("Pedrito", "ficticiaMola", "chocolate"));
-
+maquina.consumirProducto("Pedrito", "1234", "chocolate");
+maquina.agregarProducto(adminPassword, {nombre: "zumo", precio: 15, stock: 30 });
+maquina.consumirProducto("Pedrito", "1234", "zumo");
 
 
 var cliente = maquina.login("Pedrito", "1234");
