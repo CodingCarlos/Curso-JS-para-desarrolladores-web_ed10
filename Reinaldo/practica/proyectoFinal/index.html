@@ -1,14 +1,44 @@
 <html>
+
+<head>
+  <style>
+      #form{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        height: 30px;
+        padding: 20px;
+      }
+      #img{
+        z-index: 1;
+      }
+      body{
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 100px;
+      }
+      input{
+        padding: 15px;
+        font-size: 18px;
+      }
+      button{
+        padding: 19px;
+      }
+  </style>
+</head>
 <body>
 
-
+<div id="form">
 <form class="example">
   <input id="busqueda" type="text" placeholder="Search.." name="search">
-  <button onclick="enviarForm(event)"><i class="fa fa-search"></i></button>
+  <button onclick="enviarForm(event)"><i class="fa fa-search">Go!</i></button>
 </form>
 
 <img id="random" src="">
-
+</div>
 
 <script>
 
@@ -40,8 +70,8 @@ function pintarImagen(datos){
     console.log(datos.collection.items[0].links[0].href);
     console.log(randomImage);
 
-    document.getElementById("random").src = contenido;
-    document.body.style.backgroundImage = "url('img_tree.png')";
+    //document.getElementById("random").src = contenido;
+    document.body.style.backgroundImage = "url("+contenido+")";
 
 }
 
