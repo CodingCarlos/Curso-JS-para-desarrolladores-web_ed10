@@ -1,0 +1,58 @@
+<html>
+<body>
+
+
+<form class="example">
+  <input id="busqueda" type="text" placeholder="Search.." name="search">
+  <button onclick="enviarForm(event)"><i class="fa fa-search"></i></button>
+</form>
+
+<img id="random" src="">
+
+
+<script>
+
+function apiNasa (consulta, callback) {
+  var xmlHttp = new XMLHttpRequest(),
+//  APIKey = '';
+  cURL = 'https://images-api.nasa.gov/search?q='+ consulta;
+
+  xmlHttp.onreadystatechange = function () {
+      if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+          var datos = (JSON.parse(xmlHttp.responseText));
+          callback(datos);
+
+      } else if (xmlHttp.readyState === 4 && xmlHttp.status === 404) {
+          datos = JSON.parse(xmlHttp.responseText);
+          console.error("ERROR! 404");
+          console.info(datos);
+      }
+  };
+  xmlHttp.open( "GET", cURL, true );
+  xmlHttp.send();
+}
+
+//apiNasa("star", pintarImagen);
+
+function pintarImagen(datos){
+    var randomImage = Math.floor(Math.random()*datos.collection.items.length);
+    var contenido = datos.collection.items[randomImage].links[0].href;
+    console.log(datos.collection.items[0].links[0].href);
+    console.log(randomImage);
+
+    document.getElementById("random").src = contenido;
+    document.body.style.backgroundImage = "url('img_tree.png')";
+
+}
+
+function enviarForm(event){
+    event.preventDefault();
+    var busqueda = document.getElementById("busqueda").value;
+    apiNasa(busqueda, pintarImagen);
+}
+
+</script>
+
+
+</body>
+</html>
