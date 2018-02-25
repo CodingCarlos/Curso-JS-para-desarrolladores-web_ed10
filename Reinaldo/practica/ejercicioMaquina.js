@@ -93,7 +93,7 @@ var maquina = {
         //this.actualizarStock(esteProducto);
         cliente.presupuesto -= esteProducto.precio;
         cliente.productos.push(esteProducto);
-        esteProducto.stock -=1;
+        esteProducto.stock -= 1;
         console.log("El producto " + producto + " ha sido actualizado");
         return producto;
       }
@@ -109,10 +109,32 @@ var maquina = {
     if (producto.hasOwnProperty("nombre") === true
     && producto.hasOwnProperty("precio") === true
     && producto.hasOwnProperty("stock") === true) {
-        this.productos.push(producto);
-        console.log("producto agregado" , producto);
+      for (var i = 0; i < this.productos.length; i++) {
+        var productoExiste = this.productos[i];
+        if (productoExiste.nombre === producto.nombre) {
+          console.log("este producto ya existe");
+        } else {
+          this.productos.push(producto);
+          console.log("producto agregado" , producto);
+        }
+      }
     } else {
     console.log("producto no valido");
+    }
+  },
+  eliminarProducto: function(password, producto) {
+    // si el password es falso no puede
+    if (this.isAdmin(password) === false )  {
+      console.log("no eres admin");
+      return false;
+    }
+    if (producto.hasOwnProperty("nombre") === true
+    && producto.hasOwnProperty("precio") === true
+    && producto.hasOwnProperty("stock") === true) {
+        this.productos.delete(producto);
+        console.log("producto eliminado" , producto);
+    } else {
+    console.log("El producto no es válido");
     }
   },
   //   actualizarStock: function(producto){
@@ -173,7 +195,7 @@ maquina.agregarCliente(adminPassword, cliente1);
 maquina.agregarCliente(adminPassword, cliente2);
 maquina.quitarCliente(adminPassword, cliente2);
 maquina.consumirProducto("Pedrito", "1234", "chocolate");
-maquina.agregarProducto(adminPassword, {nombre: "zumo", precio: 15, stock: 30 });
+maquina.agregarProducto(adminPassword, {nombre: "chocolate", precio: 15, stock: 30 });
 maquina.consumirProducto("Pedrito", "1234", "zumo");
 
 
