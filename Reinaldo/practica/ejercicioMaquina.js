@@ -106,11 +106,6 @@ var maquina = {
       console.log("no eres admin");
       return false;
     }
-    // var encontrado = clientes.indexOf(cliente);
-    // if (encontrado > -1){
-    //   console.log("cliente existe");
-    //   return false;
-    // }
     if (producto.hasOwnProperty("nombre") === true
     && producto.hasOwnProperty("precio") === true
     && producto.hasOwnProperty("stock") === true) {
