@@ -55,6 +55,7 @@ Teoría y Recursos
 | 19/02  | [Clase 12](teoria/dia12.md) | [Clase 12](recursos/dia12.md) | Testing |
 | 21/02  | [Clase 13](teoria/dia13.md) | [Clase 13](recursos/dia13.md) | Eventos, APIs y más AJAX  |
 | 23/02  | [Clase 14](teoria/dia14.md) | [Clase 14](recursos/dia14.md) | Práctica y aún más APIs  |
+| 26/02  | [Clase 15](teoria/dia15.md) | Clase 15 | JavaScript: ¿Y ahora qué?  |
 
 
 
