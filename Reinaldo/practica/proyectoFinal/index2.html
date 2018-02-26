@@ -15,10 +15,9 @@
       }
       body{
         background-size: 80%;
-        background-repeat: repeat;
+        background-repeat: no-repeat;
         background-position: center center;
         padding: 100px;
-        background-color: #000000;
       }
       input{
         padding: 15px;
@@ -27,26 +26,28 @@
       button{
         padding: 19px;
       }
-      h1{
-        font-family: "helvetica", arial, sans-serif;
-        color: #ffffff;
+      video{
+        width: 300px;
+        height: 300px;
       }
+
   </style>
 </head>
 <body>
 
 <div id="form">
-  <h1>Play with the space</h1>
 <form class="example">
-  <input id="busqueda" type="text" placeholder="Buscar..." name="search">
+  <input id="busqueda" type="text" placeholder="Search.." name="search">
   <select id="api" class="" name="api">
     <option value="imagen">img</option>
+    <option value="audio">audio</option>
     <option value="video">video</option>
+
   </select>
   <button onclick="enviarForm(event)"><i class="fa fa-search">Go!</i></button>
 
 </form>
-
+<video id="vid"></video>
 <img id="random" src="">
 </div>
 
@@ -55,8 +56,10 @@
 function apiUrl (api, consulta){
   if (api === 0) {
     return 'https://images-api.nasa.gov/search?q='+ consulta;
-
-
+  } else if (api === 1){
+    return 'https://api.nasa.gov/planetary/sounds?q=' + consulta;
+  } else {
+    return 'https://images-api.nasa.gov/search?q=' + consulta;
   }
 }
 
@@ -85,11 +88,24 @@ function apiNasa (api, consulta, callback) {
 function pintarImagen(datos){
     var randomImage = Math.floor(Math.random()*datos.collection.items.length);
     var contenido = datos.collection.items[randomImage].links[0].href;
-    console.log(datos.collection.items[0].links[0].href);
-    console.log(randomImage);
+    console.log(datos.collection.items[26].data[0]);
+    var media_type = datos.collection.items[0].data[0].media_type;
 
-    //document.getElementById("random").src = contenido;
-    document.body.style.backgroundImage = "url("+contenido+")";
+    if (media_type == "image") {
+      console.log(datos.collection.items[0].links[0].href);
+      console.log(randomImage);
+      //document.getElementById("random").src = contenido;
+      document.body.style.backgroundImage = "url("+contenido+")";
+
+    } else if (media_type == "video") {
+      console.log("es un video");
+      document.body.style.backgroundImage = "";
+      document.getElementById("vid").src = contenido;
+
+    } else if (media_type == "audio") {
+      document.body.style.backgroundImage = "";
+      document.getElementById("div").src = contenido;
+    }
 
 }
 
