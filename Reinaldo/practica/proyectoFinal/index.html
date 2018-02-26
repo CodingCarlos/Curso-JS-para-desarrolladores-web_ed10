@@ -1,0 +1,108 @@
+<html>
+<head>
+  <style>
+      #form{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        height: 30px;
+        padding: 20px;
+      }
+      #img{
+        z-index: 1;
+      }
+      body{
+        background-size: 80%;
+        background-repeat: repeat;
+        background-position: center center;
+        padding: 100px;
+        background-color: #000000;
+      }
+      input{
+        padding: 15px;
+        font-size: 18px;
+      }
+      button{
+        padding: 19px;
+      }
+      h1{
+        font-family: "helvetica", arial, sans-serif;
+        color: #ffffff;
+      }
+  </style>
+</head>
+<body>
+
+<div id="form">
+  <h1>Play with the space</h1>
+<form class="example">
+  <input id="busqueda" type="text" placeholder="Buscar..." name="search">
+  <select id="api" class="" name="api">
+    <option value="imagen">img</option>
+    <option value="video">video</option>
+  </select>
+  <button onclick="enviarForm(event)"><i class="fa fa-search">Go!</i></button>
+
+</form>
+
+<img id="random" src="">
+</div>
+
+<script>
+
+function apiUrl (api, consulta){
+  if (api === 0) {
+    return 'https://images-api.nasa.gov/search?q='+ consulta;
+
+
+  }
+}
+
+function apiNasa (api, consulta, callback) {
+  var xmlHttp = new XMLHttpRequest(),
+//  APIKey = '';
+  cURL = apiUrl(api, consulta);
+
+  xmlHttp.onreadystatechange = function () {
+      if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+          var datos = (JSON.parse(xmlHttp.responseText));
+          callback(datos);
+
+      } else if (xmlHttp.readyState === 4 && xmlHttp.status === 404) {
+          datos = JSON.parse(xmlHttp.responseText);
+          console.error("ERROR! 404");
+          console.info(datos);
+      }
+  };
+  xmlHttp.open( "GET", cURL, true );
+  xmlHttp.send();
+}
+
+//apiNasa("star", pintarImagen);
+
+function pintarImagen(datos){
+    var randomImage = Math.floor(Math.random()*datos.collection.items.length);
+    var contenido = datos.collection.items[randomImage].links[0].href;
+    console.log(datos.collection.items[0].links[0].href);
+    console.log(randomImage);
+
+    //document.getElementById("random").src = contenido;
+    document.body.style.backgroundImage = "url("+contenido+")";
+
+}
+
+function enviarForm(event){
+    event.preventDefault();
+    var busqueda = document.getElementById("busqueda").value;
+    var api = document.getElementById("api").selectedIndex;
+    console.log(api);
+    apiNasa(api, busqueda, pintarImagen);
+}
+
+</script>
+
+
+</body>
+</html>
